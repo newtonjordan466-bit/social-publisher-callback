@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<title>Newton Social Publisher privacy notice</title>
+<style>body{font:17px/1.6 system-ui,sans-serif;max-width:48rem;margin:3rem auto;padding:0 1.25rem;color:#18212b;background:#fafafa}h1,h2{line-height:1.2}a{color:#155da8}</style>
+</head>
+<body>
+<main>
+<h1>Newton Social Publisher privacy notice</h1>
+<p>Last updated October 23, 2026.</p>
+<p>Newton Social Publisher is Jordan Newton’s internal tool for managing connected business social accounts, including Ascend. It prepares and publishes reviewed posts and helps manage comments and customer messages. This notice describes data handled by that tool.</p>
+<h2>Information we handle</h2>
+<p>For connected accounts, the tool handles account identifiers, usernames, authorization credentials, post content and publication results. When the customer inbox is enabled, it also handles relevant comments, message text, sender and conversation identifiers, timestamps, message status and our responses. Please do not send passwords, payment-card details or other sensitive information in a social message.</p>
+<h2>How we use it</h2>
+<p>We use this information to operate the connected accounts, respond to requests, prepare replies for review, prevent duplicate or inappropriate responses, honor opt-outs and investigate delivery failures. A human approves individual replies unless a separately approved FAQ policy permits an exact automatic response. AI tools may assist authorized staff with research and drafting; that does not give them independent permission to send a reply.</p>
+<h2>Where information is processed</h2>
+<p>The publisher runs on a privately administered computer. Supabase hosts media and temporarily queues incoming notifications. Selected conversation context and response drafts are copied to a restricted Slack review channel. Meta and other connected social platforms process their own service data under their policies. When an AI assistant is used for drafting, the supplied context is also processed by that assistant’s provider, such as Anthropic or OpenAI. We do not sell customer message data.</p>
+<h2>Retention</h2>
+<p>Queued notification bodies are cleared after receipt by the publisher or expire after 24 hours. A database cleanup job removes expired queue records each minute while the database is available. The local inbox normally erases message and reply text at the first hourly cleanup after 30 days and attempts to delete its recorded Slack copies. Failed Slack deletions are retried. Audit metadata normally expires after 90 days, with exceptions for unresolved delivery or deletion issues. Content-free opt-out, pause and human-takeover records are retained to prevent unwanted replies.</p>
+<p>These application controls do not erase messages from your own social account, unknown copies, workspace exports or provider backups. Those are governed separately by the platform or workspace’s controls. Publishing records and credentials are retained as needed to operate connected accounts and reconcile posts.</p>
+<h2>Your choices and deletion requests</h2>
+<p>You can ask us to stop automated replies, request a person, or request deletion of information held by this tool. Email <a href="mailto:support@ascendresearch.co">support@ascendresearch.co</a> with your social platform and username, and describe the request. Do not include passwords or access tokens. We may ask you to confirm control of the relevant account before acting. We will explain any information we need to retain and any limits on deletion from third-party systems.</p>
+<p>Account owners can also revoke the app’s access in their social platform settings. Revocation stops future authorized access but does not itself erase records already stored.</p>
+<h2>Contact and changes</h2>
+<p>For questions about this tool, contact <a href="mailto:support@ascendresearch.co">support@ascendresearch.co</a>. We will update this page when its data-handling practices change.</p>
+</main>
+</body>
+</html>
