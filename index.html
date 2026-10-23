@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-kpUaIUC+JVyX3YqlAy+BMcz641PuqsaQBEGG8B4KhwY='; style-src 'sha256-54cNIX4iZgoLzQHSOiGxpl1TXJRV6QSlutjGtsXOPPw='; base-uri 'none'; form-action 'none'">
+<title>Social Publisher account connection</title>
+<style>
+body {font: 18px/1.5 system-ui, sans-serif; max-width: 44rem; margin: 4rem auto; padding: 0 1.5rem; color: #18212b; background: #fafafa;}
+textarea {width: 100%; box-sizing: border-box; min-height: 12rem; padding: 1rem; font: 14px/1.5 monospace; overflow-wrap: anywhere;}
+</style>
+</head>
+<body>
+<h1>Social Publisher account connection</h1>
+<p id="status">JavaScript is needed to prepare the callback. Return to your terminal if this message remains.</p>
+<textarea id="callback" aria-label="Complete callback URL" readonly hidden spellcheck="false" autocomplete="off"></textarea>
+<p>This page does not publish anything. Confirm the account name in your terminal before saving the connection.</p>
+<script>
+'use strict';
+const callback = new URL(location.href);
+history.replaceState(null, '', location.pathname);
+const status = document.getElementById('status');
+const field = document.getElementById('callback');
+if (callback.searchParams.has('error')) {
+  status.textContent = 'Authorization was declined. Return to the terminal and start again when ready.';
+} else if (callback.searchParams.getAll('code').length === 1 && callback.searchParams.get('code') && callback.searchParams.getAll('state').length === 1 && callback.searchParams.get('state')) {
+  callback.hash = '';
+  field.value = callback.href;
+  field.hidden = false;
+  status.textContent = 'Copy the complete URL below into the hidden prompt in your Social Publisher terminal within five minutes. Then close this tab. Do not paste it into chat.';
+} else {
+  status.textContent = 'Start account connection from the Social Publisher terminal. This page does not connect an account by itself.';
+}
+</script>
+</body>
+</html>
